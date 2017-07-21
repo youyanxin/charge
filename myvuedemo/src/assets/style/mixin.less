@@ -1,0 +1,74 @@
+// 边框
+.mx_bd(@num,@color){
+    border:@num solid @color;
+}
+
+//圆角
+.mx_brRadius(@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -ms-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+}
+
+//盒子不溢出
+.mx_bdbox{
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+//定位上下左右居中
+.mx_allcenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//宽高
+.mx_wh(@width, @height) {
+    width: @width;
+    height: @height;
+}
+
+//上边框下边框
+.mx_btborder(@bottomNum,@bottomColor,@topNum,@topColor){
+    border-bottom:@bottomNum solid @bottomColor;
+    border-top:@topNum solid @topColor; 
+}
+
+//高行高
+.mx_hlh(@height, @line-height) {
+    height: @height;
+    line-height: @line-height;
+}
+
+//宽高行高
+.mx_whlh(@width, @height, @line-height) {
+    width: @width;
+    height: @height;
+    line-height: @line-height;
+}
+
+//字体大小，颜色
+.mx_fc(@size, @color) {
+    font-size: @size;
+    color: @color;
+}
+
+//多行文本显示省略号
+.mx_more_ellipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+}
+
+//单行文本显示省略号
+.mx_single_ellipsis{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
