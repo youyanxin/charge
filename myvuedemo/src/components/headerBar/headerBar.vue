@@ -1,45 +1,49 @@
 <template>
     <div class="headerBar">
-        <span v-text="title"></span>
-        <router-link to="/details" class="detailBtn">
-            <span v-text="txt"></span>
+        <router-link to="/" class="detailBtn">
             <i class="iconfont icon-dayuhao"></i>
+            <span v-text="txt"></span>
         </router-link>
+        <span v-text="title"></span>
     </div>
 </template>
 
 <script>
 export default {
     name: "headerBar",
+    props: ["title"],
     data() {
         return {
-            title:"今日收益(元)",
-            txt:"详情"
+            txt: "返回"
         }
     }
 }
 </script>
 
 <style lang="less">
+@import '../../assets/style/mixin.less';
 .headerBar {
-    width: 100%;
+    .mx_fc(.48rem, #fff);
+    .mx_whlh(100%, .96rem, .96rem);
     background-color: rgb(14, 164, 255);
-    height: .96rem;
-    line-height: .96rem;
+    box-shadow: 0px 6px 5px 0px rgba(9, 103, 160, 0.22);
     text-align: center;
-    font-size:.46rem;
-    color: #fff;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
     .detailBtn {
         display: block;
-        font-size: .32rem;
+        font-size: .38rem;
         position: absolute;
-        right: 3%;
+        left: 3%;
         top: 0;
         color: #fff;
         .iconfont {
-            font-size: 0.86rem;
-            margin-left: 0.1rem;
+            font-size: 0.3rem;
+            display: inline-block;
+            transform: translateY(-2px) rotate(180deg);
         }
     }
 }

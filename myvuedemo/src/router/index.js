@@ -3,12 +3,12 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const index = r => require.ensure([], () => r(require('../page/operate/index/index.vue')), 'index')
-const set = r => require.ensure([], () => r(require('../page/operate/set/set.vue')), 'set')
-const incomeDetails = r => require.ensure([], () => r(require('../page/operate/incomeDetails/incomeDetails.vue'), 'incomeDetails'))
-const chargeDataDetails = r => require.ensure([], () => r(require('../page/operate/chargeDataDetails/chargeDataDetails.vue'), 'chargeDataDetails'))
-const userDataDetails = r => require.ensure([], () => r(require('../page/operate/userDataDetails/userDataDetails.vue'), 'userDataDetails'))
-const checkDataDetails = r => require.ensure([], () => r(require('../page/operate/checkDataDetails/checkDataDetails.vue'), 'checkDataDetails'))
+const index = r => require.ensure([], () => r(require('../page/index/index.vue')), 'index')
+const set = r => require.ensure([], () => r(require('../page/set/set.vue')), 'set')
+const incomeDetails = r => require.ensure([], () => r(require('../page/incomeDetails/incomeDetails.vue'), 'incomeDetails'))
+const chargeDataDetails = r => require.ensure([], () => r(require('../page/chargeDataDetails/chargeDataDetails.vue'), 'chargeDataDetails'))
+const userDataDetails = r => require.ensure([], () => r(require('../page/userDataDetails/userDataDetails.vue'), 'userDataDetails'))
+const checkDataDetails = r => require.ensure([], () => r(require('../page/checkDataDetails/checkDataDetails.vue'), 'checkDataDetails'))
 
 export default new Router({
   routes: [{
@@ -46,14 +46,4 @@ export default new Router({
       component:checkDataDetails
     }
   ]
-  /*scrollBehavior(to, from, savedPosition) {
-    if (savedPosition) {
-      return savedPosition
-    } else {
-      return {
-        x: 0,
-        y: 0
-      }
-    }
-  }*/
 })

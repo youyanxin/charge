@@ -1,13 +1,25 @@
 <template>
   <div id="app">
+    <!-- <loading v-model="isLoading"></loading> -->
     <router-view></router-view>
   </div>
 </template>
 
 <script>
 import '../static/fontResize'
+import {
+  Loading
+} from 'vux'
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    Loading
+  },
+  // computed: {
+  //   isLoading() {
+  //     return this.$store.state.isLoading;
+  //   }
+  // }
 }
 </script>
 
@@ -18,12 +30,15 @@ export default {
 [v-cloak] {
   display: none;
 }
-@font-face{
+
+@font-face {
   font-family: "PingFang";
-  src:url("./assets/font/PingFang Regular.ttf");
+  src: url("./assets/font/PingFang Regular.ttf");
 }
+
 #app {
-  .mx_wh(100%,100%);
+  .mx_wh(100%,
+  100%);
   font-family: "PingFang";
 }
 </style>

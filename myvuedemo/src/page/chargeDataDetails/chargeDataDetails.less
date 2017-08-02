@@ -1,0 +1,49 @@
+@import '../../assets/style/mixin.less';
+.chargeDataDetails {
+  .charge-con {
+    margin-top: 1.16rem;
+    .c-item {
+      width: 94%;
+      padding: .3rem 0;
+      margin: .2rem auto;
+      box-shadow: 0px 5px 5px 0px rgba(27, 105, 152, 0.22);
+      ul li {
+        float: left;
+        width: 33.3%;
+        text-align: center;
+        border-right: 1px solid #c6c6c6;
+        height: 1.2rem;
+        overflow: hidden;
+        .mx_bdbox;
+        span {
+          display: block;
+          margin: .3rem auto;
+          .mx_whlh(1.4rem, .6rem, .6rem);
+          .mx_fc(.38rem, #0e0e0e);
+          .mx_bd(2px, #f05858);
+          .mx_brRadius(.08rem);
+          .mx_bdbox;
+          background: url('../../assets/img/address.png') no-repeat 5px 3px;
+          background-size: .3rem .4rem;
+          text-align: right;
+          padding-right: .1rem;
+        }
+
+        small {
+          .mx_fc(.38rem,
+          #0e0e0e);
+          display: block;
+          &:first-child {
+            margin-bottom: .1rem;
+          }
+          &.c-df {
+            color: #df6d6d;
+          }
+        }
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+}

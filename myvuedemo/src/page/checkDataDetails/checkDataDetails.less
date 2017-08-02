@@ -1,0 +1,37 @@
+@import '../../assets/style/mixin.less';
+.checkDataDetails {
+  .check-con {
+    margin-top: 1.16rem;
+    .check-item {
+      width: 94%;
+      text-align: center;
+      padding: .3rem 0;
+      margin: .2rem auto;
+      background-color: #fff;
+      box-shadow: 0px 6px 7px 0px rgba(42, 112, 155, 0.24);
+      .check-title {
+        .mx_fc(.32rem, #151515);
+        margin-bottom: .2rem;
+      }
+      .check-btn-item {
+        .check-btn {
+          .mx_fc(.28rem, #fff);
+          .mx_whlh(1.1rem, .6rem, .6rem);
+          .mx_brRadius(8px);
+          display: block;
+          float: left;
+        }
+        .check-finished {
+          background-color: #ff5f5f;
+          box-shadow: 0px 4px 3.92px 0.08px rgba(177, 60, 60, 0.39);
+        }
+        .check-unfinished {
+          margin-left: 2.05rem;
+          margin-right: .6rem;
+          background-color: #b6b6b6;
+          box-shadow: 0px 4px 3.92px 0.08px rgba(156, 155, 155, 0.39);
+        }
+      }
+    }
+  }
+}

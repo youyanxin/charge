@@ -1,0 +1,145 @@
+@import '../../assets/style/mixin.less';
+.index {
+    .con {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .t-line {
+        .mx_fc(.48rem,#fff);
+        width: 100%;
+        height: .96rem;
+        line-height: .96rem;
+        text-align: center;
+        background-color: #0ea4ff;
+    }
+
+    .t-details {
+        font-size: .38rem;
+        color: #fff;
+        position: absolute;
+        right: 3%;
+        top: 0;
+        display: block;
+        i{
+            .mx_fc(.3rem,#fff)
+        }
+    }
+
+    .t-cen {
+        margin-top: -1px;
+        background: -moz-linear-gradient( -90deg, rgb(14, 164, 255) 0%, rgb(163, 222, 250) 89%);
+        background: -ms-linear-gradient( -90deg, rgb(14, 164, 255) 0%, rgb(163, 222, 250) 89%);
+        background: -webkit-linear-gradient( -90deg, rgb(14, 164, 255) 0%, rgb(163, 222, 250) 89%);
+    }
+
+    .t-num {
+        display: block;
+        color: #fff;
+        font-size: 1.1rem;
+        text-align: center;
+        margin-bottom: .41rem;
+    }
+
+    .t-menu li {
+        float: left;
+        width: 50%;
+        text-align: center;
+        color: #fff;
+        font-size: .38rem;
+    }
+
+    .t-menu li span {
+        display: block;
+        margin-bottom: .4rem;
+    }
+
+    .t-item {
+        width: 94%;
+        margin: .2rem auto;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 5px 5px 0px rgba(5, 57, 89, 0.22);
+    }
+
+    .t-title {
+        position: relative;
+        width: 100%;
+        font-size: .32rem;
+        color: #292929;
+        height: .6rem;
+        line-height: .6rem;
+        border-bottom: 1px solid rgb(230, 229, 229);
+        padding-left: .4rem;
+        box-sizing: border-box;
+    }
+
+    .i-details {
+        font-size: .32rem;
+        color: #febdbd;
+        position: absolute;
+        right: 3%;
+        top: 0;
+        display: block;
+        i{
+            .mx_fc(.3rem,#dbdada);
+        }
+    }
+
+    .t-itemcon {
+        padding: .2rem .4rem;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .t-itemcon span {
+        text-align: center;
+        display: block;
+    }
+
+    .t-itemcon span small {
+        display: block;
+        font-size: .32rem;
+        color: #353434;
+    }
+
+    .t-itemcon span small:first-child {
+        margin-bottom: .15rem;
+    }
+
+    .tfs-item .t-itemcon span:first-child,
+    .tfs-item .t-itemcon span:last-child {
+        position: absolute;
+        top: .2rem;
+    }
+
+    .tfs-item .t-itemcon span:first-child {
+        left: .4rem;
+    }
+
+    .tfs-item .t-itemcon span:last-child {
+        right: .4rem;
+    }
+
+    .tss-item .t-itemcon span:first-child {
+        float: left;
+    }
+
+    .tss-item .t-itemcon span:last-child {
+        float: right;
+    }
+
+    .t-check {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .t-itemcon ol li {
+        color: #7f7e7e;
+        font-size: .28rem;
+        height: .7rem;
+        line-height: .7rem;
+        border-bottom: 1px solid rgb(230, 229, 229);
+        list-style-type: decimal;
+        list-style-position: inside;
+    }
+}

@@ -8,22 +8,23 @@ FastClick.attach(document.body)
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-//import store from './store'
+import 'iview/dist/styles/iview.css'    // 使用 CSS
+
 
 Vue.config.productionTip = false
 
-import VueLazyload from 'vue-lazyload'
+//import VueLazyload from 'vue-lazyload'
 //定义懒加载插件
-Vue.use(VueLazyload, {
-  error: require('./assets/img/notFound.jpg'),
-  loading: require('./assets/img/loading.gif'),
-  attempt: 1
-})
+// Vue.use(VueLazyload, {
+//   error: require('./assets/img/notFound.jpg'),
+//   loading: require('./assets/img/loading.gif'),
+//   attempt: 1
+// })
 
 //引入公用方法库
-import format from './utils/utils';
+//import format from './utils/utils';
 //将公用方法定义在vue原型
-Vue.prototype.format = format;
+//Vue.prototype.format = format;
 
 /* eslint-disable no-new */
 new Vue({

@@ -1,0 +1,98 @@
+@import '../../assets/style/mixin.less';
+.incomeDetails {
+    .income-item {
+        width: 94%;
+        margin: 1.16rem auto 0;
+        .income-time {
+            position: relative;
+            .mx_fc(.26rem, #a2a2a2);
+            z-index: 998;
+            &:after {
+                position: absolute;
+                left: -.25rem;
+                top: 5px;
+                content: "";
+                width: .1rem;
+                height: .1rem;
+                background-color: #cbcccd;
+                border-radius: 50%;
+                z-index: 998;
+            }
+        } 
+    }
+    .income-content {
+        .income-ul {
+            margin: .2rem 0;
+            box-shadow: 0px 2px 1.96px 0.04px rgba(5, 37, 57, 0.22);
+            .mx_wh(100%, 1rem);
+            li {
+                float: left;
+                width: 33.3%;
+                text-align: center;
+                border-right: 1px solid #c6c6c6;
+                height: .8rem;
+                overflow: hidden;
+                .mx_bdbox;
+                span {
+                    display: block;
+                    margin: .15rem auto;
+                    .mx_whlh(1.4rem, .6rem, .6rem);
+                    .mx_fc(.28rem, #0e0e0e);
+                    background: url('../../assets/img/address.png') no-repeat 10px 7px;
+                    background-size: .25rem .3rem;
+                    text-align: right;
+                    padding-right: .25rem;
+                }
+                small {
+                    .mx_fc(.28rem,
+                    #585757);
+                    display: block;
+                    &:first-child {
+                        margin-bottom: .05rem;
+                    }
+                    &.c-df {
+                        color: #df6d6d;
+                    }
+                }
+                &:last-child {
+                    border-right: none;
+                }
+            }
+        }
+    }
+    .income-timeline {
+        position: relative;
+        &:after {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            content: "";
+            height: 100%;
+            border-left: 1px solid #e9eaea;
+        }
+    }
+    .income-con {
+        width: 97%;
+        margin-left: 3%;
+        position: relative;
+        &.active {
+            .income-time {
+                color: #ff9090;
+                position: fixed;
+                top: .96rem;
+                left: .4rem;
+                background-color: #fff;
+                .mx_whlh(100%,.7rem,.7rem);
+                &:after {
+                    background-color: #b5e1fc;
+                    left: -0.22rem;
+                    top: .3rem;
+                    z-index: 998;
+                }
+            }
+            .income-content {
+                padding-top:.3rem;
+            }
+        }
+    }
+}

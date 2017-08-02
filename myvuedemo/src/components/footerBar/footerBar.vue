@@ -37,7 +37,7 @@ export default {
         .iconfont {
             font-size: .4rem;
             display: block;
-            margin: 0.1rem 0;
+            margin-top:.02rem;
         }
     }
     .active {

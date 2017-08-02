@@ -12,6 +12,8 @@
   "dependencies": {
     "css": "^2.2.1",
     "css-loader": "^0.28.4",
+    "echarts": "^3.6.2",
+    "iview": "^2.0.0-rc.19",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
     "vue": "^2.3.3",

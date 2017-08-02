@@ -4,7 +4,7 @@ var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
 const vuxLoader = require('vux-loader')
 
-function resolve (dir) {
+function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 
@@ -15,21 +15,18 @@ const webpackConfig = {
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
-    publicPath: process.env.NODE_ENV === 'production'
-      ? config.build.assetsPublicPath
-      : config.dev.assetsPublicPath
+    publicPath: process.env.NODE_ENV === 'production' ?
+      config.build.assetsPublicPath : config.dev.assetsPublicPath
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      'src': resolve('src'),
-      //'assets':resolve('src/assets')
+      'src': resolve('src')
     }
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.vue$/,
         loader: 'vue-loader',
         options: vueLoaderConfig
@@ -62,7 +59,16 @@ const webpackConfig = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      }
+      },
+      {
+        test: /iview.src.*?js$/,
+        loader: 'babel'
+      },
+      // {
+      //   test: /\.js$/,
+      //   loader: 'babel',
+      //   exclude: /node_modules/
+      // }
     ]
   }
 }

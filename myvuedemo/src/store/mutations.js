@@ -1,3 +1,4 @@
+//根级别的mutations
 export default{
     //设置加载状态
     isLoading(state,payload){
